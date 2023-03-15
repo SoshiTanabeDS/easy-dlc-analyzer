@@ -16,6 +16,14 @@ def config_panel():
 def image_panel():
     image_panel = VGroup(
         Item("image_plot", editor=ComponentEditor()),
-        Item("frame", label="Postion of frame")
+        Item("frame", label="Postion of frame"),
+        Item("max_frame", label="Maximum frame", style="readonly")
     )
     return image_panel
+
+def graph_panel():
+    graph_panel = VGroup(
+        Item("graph_plot", editor=ComponentEditor()),
+        Item("parameter", label="Parameter"),
+    )
+    return graph_panel
